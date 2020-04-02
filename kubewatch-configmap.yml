@@ -6,7 +6,7 @@ data:
   .kubewatch.yaml: |
     handler:
       webhook:
-        url: ""
+        url: "https://desolate-dusk-84164.herokuapp.com/kubewatch/webhook"
     resource:
       deployment: true
       replicationcontroller: false
