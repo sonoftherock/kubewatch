@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: kubewatch
-  namespace : devops
+  namespace : default
 spec:
   containers:
   - image: bitnami/kubewatch:latest
     env : 
-    - name : https://desolate-dusk-84164.herokuapp.com/kubewatch/webhook
-      value : ""
+    - name : KW_WEBHOOK_URL
+      value : "https://desolate-dusk-84164.herokuapp.com/kubewatch/webhook"
     resources:
       requests:
         memory: "10Mi"
